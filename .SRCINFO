@@ -1,7 +1,7 @@
 pkgbase = libfastjson
 	pkgdesc = A performance-focused json library for C
 	pkgver = 1.2304.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/rsyslog/libfastjson
 	arch = x86_64
 	arch = i686
@@ -9,6 +9,10 @@ pkgbase = libfastjson
 	arch = armv7h
 	license = GPL
 	source = libfastjson-1.2304.0.tar.gz::https://github.com/rsyslog/libfastjson/archive/v1.2304.0.tar.gz
+	source = fix-calloc-transposed-args.patch
+	source = add-libm.patch
 	sha256sums = 6c18848c75b179108429fc2818273551c68ffe6ddd5e414c20c071c844befbc1
+	sha256sums = db59ae9d860dab8182d297d846aa731c1a99a1c5d0f9112132de6e5f01aeff6d
+	sha256sums = 962d6ebd7ef2eefe14621af36cc32c282519704a9d7146c3b1297079adbe9e9a
 
 pkgname = libfastjson

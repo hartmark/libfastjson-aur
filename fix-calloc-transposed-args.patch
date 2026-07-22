@@ -1,0 +1,22 @@
+--- a/arraylist.c
++++ b/arraylist.c
+@@ -31,7 +31,7 @@
+ 	arr->size = ARRAY_LIST_DEFAULT_SIZE;
+ 	arr->length = 0;
+ 	arr->free_fn = free_fn;
+-	if(!(arr->array = (void**)calloc(sizeof(void*), arr->size))) {
++	if(!(arr->array = (void**)calloc(arr->size, sizeof(void*)))) {
+ 		free(arr);
+ 		return NULL;
+ 	}
+--- a/json_object.c
++++ b/json_object.c
+@@ -214,7 +214,7 @@
+ 
+ static struct fjson_object* fjson_object_new(const enum fjson_type o_type)
+ {
+-	struct fjson_object *const jso = (struct fjson_object*)calloc(sizeof(struct fjson_object), 1);
++	struct fjson_object *const jso = (struct fjson_object*)calloc(1, sizeof(struct fjson_object));
+ 	if (!jso)
+ 		return NULL;
+ 	jso->o_type = o_type;
